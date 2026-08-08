@@ -246,7 +246,7 @@ class tenetWatchFaceView extends WatchUi.WatchFace {
 
         // 快取全域 Graphics 列舉常數 (防止 VM 尋找 Graphics 命名空間)
         var colorDarkGray = Graphics.COLOR_DK_GRAY;
-        var colorRed = Graphics.COLOR_RED;
+        var colorWhite = Graphics.COLOR_WHITE;
         var colorTransparent = Graphics.COLOR_TRANSPARENT;
         var justifyCenter = Graphics.TEXT_JUSTIFY_CENTER;
         var justifyLeft = Graphics.TEXT_JUSTIFY_LEFT;
@@ -498,7 +498,7 @@ class tenetWatchFaceView extends WatchUi.WatchFace {
         dc.drawText(secX, secY, fontSec, secStr, justifyLeft);
 
         // ================= 繪製第二組：紅色時間大字 =================
-        dc.setColor(colorRed, colorTransparent);
+        dc.setColor(colorWhite, colorTransparent);
 
         // 7. 繪製小時
         dc.drawText(cachedStartX, yPos, fontNum, hourStr, justifyLeft);

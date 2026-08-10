@@ -161,7 +161,7 @@ class tenetWatchFaceView extends WatchUi.WatchFace {
         // 載入三號戰機點陣圖資源並計算其繪製坐標 (置於 6 點鐘方向)
         mThreeFighter = WatchUi.loadResource(Rez.Drawables.ThreeFighter) as BitmapResource;
         mFighterX = mScreenCenterX - 30; // 寬度 60 像素，X 置中
-        mFighterY = screenHeight - 50 + 3; // 往下再微調 2 像素，回到完美貼齊底緣基準
+        mFighterY = screenHeight - 50; // 往上微調 3 像素
     }
 
     // Called when this View is brought to the foreground. Restore

@@ -206,8 +206,8 @@ class tenetWatchFaceView extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
-        // 6. 繪製深灰色秒數 (直讀 VM 暫存器，零 Symbol lookup)
-        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+        // 6. 繪製白色秒數 (直讀 VM 暫存器，零 Symbol lookup)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(secX, secY, fontSec, secStr, Graphics.TEXT_JUSTIFY_LEFT);
         
         // 7. 重置剪裁區
@@ -495,6 +495,7 @@ class tenetWatchFaceView extends WatchUi.WatchFace {
         dc.drawLine(pipe2X, pipeY1, pipe2X, pipeY2);
 
         // 7. 繪製秒數 (不論睡眠還是亮屏，onUpdate 都在全屏刷新時畫出當前秒數，隨後每秒由 onPartialUpdate 接管局部刷新)
+        dc.setColor(colorWhite, colorTransparent);
         dc.drawText(secX, secY, fontSec, secStr, justifyLeft);
 
         // ================= 繪製第二組：紅色時間大字 =================

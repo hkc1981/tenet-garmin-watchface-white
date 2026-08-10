@@ -245,7 +245,7 @@ class tenetWatchFaceView extends WatchUi.WatchFace {
         var timeModule = Time;
 
         // 快取全域 Graphics 列舉常數 (防止 VM 尋找 Graphics 命名空間)
-        var colorLtGray = Graphics.COLOR_LT_GRAY;
+        var colorDarkGray = Graphics.COLOR_DK_GRAY;
         var colorWhite = Graphics.COLOR_WHITE;
         var colorTransparent = Graphics.COLOR_TRANSPARENT;
         var justifyCenter = Graphics.TEXT_JUSTIFY_CENTER;
@@ -474,7 +474,7 @@ class tenetWatchFaceView extends WatchUi.WatchFace {
         var fighterY = mFighterY;
 
         // ================= 繪製第一組：深灰色輔助資訊 =================
-        dc.setColor(colorLtGray, colorTransparent);
+        dc.setColor(colorDarkGray, colorTransparent);
 
         // 1. 繪製日出落時間
         dc.drawText(screenCenterX, sunY, fontSun, sunStr, justifyCenter);

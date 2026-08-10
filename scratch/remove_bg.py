@@ -62,7 +62,7 @@ def remove_background_and_tint_advanced():
                     # 將亮度閾值降低至 140。任何原本偏亮偏白的部分（如臉部皮膚填充、衣服填充、外圍背景），
                     # 一律強制設定為完全透明 (Alpha=0)！這能徹底防止娃娃內部被填滿，僅保留骨架輪廓線！
                     if gray > 140:
-                        pixels[x, y] = (180, 180, 180, 0)
+                        pixels[x, y] = (170, 170, 170, 0)
                     else:
                         # 對留存下來的輪廓線 (gray <= 140) 套用高不透明度，並進行平滑防鋸齒邊緣淡出
                         if gray < 110:
@@ -71,7 +71,7 @@ def remove_background_and_tint_advanced():
                             # 110~140 之間平滑漸變，保證線條自然，不起毛刺
                             new_alpha = int((140 - gray) * (255.0 / (140 - 110)))
                         
-                        pixels[x, y] = (180, 180, 180, new_alpha)
+                        pixels[x, y] = (170, 170, 170, new_alpha)
 
         # 4. 等比例縮放且居中貼圖至 60x50 畫布上，防範拉伸畸變與比例失調問題
         target_w, target_h = 60, 50
